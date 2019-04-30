@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <h2>Post</h2>
+    <ion-card *ngIf="post">
+      <ion-card-header>
+        <ion-card-title>
+          {{ post.title }}
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content text-center>
+        {{ post.body }}
+      </ion-card-content>
+    </ion-card>
+    <h2>User</h2>
+    <ion-card *ngIf="user">
+      <ion-card-header>
+        <ion-card-title>
+          {{ user.name }}
+        </ion-card-title>
+      </ion-card-header>
+    </ion-card>
+    <h2>Comments</h2>
+    <ion-item *ngFor="let comment of comments">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{comment.name}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content text-center>
+          <p>{{comment.body}}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+</ion-content>

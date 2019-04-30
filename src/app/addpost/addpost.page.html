@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Post</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <form (ngSubmit)="savePost()">
+      <ion-item>
+        <ion-label>Title</ion-label>
+        <ion-input type="text" [(ngModel)]="post.title" name="title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Body</ion-label>
+        <ion-textarea type="text" [(ngModel)]="post.body" name="body"></ion-textarea>
+      </ion-item>
+      <button ion-button type="submit" block>Add Post</button>
+    </form>
+  </ion-content>
